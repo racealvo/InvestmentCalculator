@@ -1,4 +1,23 @@
 <form (ngSubmit)="onSubmit()">
-  <label for="userInput">Enter something:</label>
-  <input id="userInput" [(ngModel)]="userInput" name="userInput" />
+  <div class="input-group">
+    <p>
+      <label for="initial-investment">Initial Investment</label>
+      <input id="initial-investment" type="number" [(ngModel)]=initialInvestment name="initial-investment" required>
+    </p>
+    <p>
+      <label for="annual-investment">Annual Investment</label>
+      <input id="annual-investment" type="number" [(ngModel)]="annualInvestment" name="annualInvestment" required>
+    </p>
+  </div>
+  <div class="input-group">
+    <p>
+      <label for="expected-return">Expected Return</label>
+      <input id="expected-return" type="number" [(ngModel)]="expectedReturn" name="expectedReturn" required>
+    </p>
+    <p>
+      <label for="duration">Duration</label>
+      <input id="duration" type="number" [(ngModel)]="duration" name="duration" required>
+    </p>
+  </div>
+  <button>Calculate</button>
 </form>
